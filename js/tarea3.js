@@ -64,9 +64,18 @@ circle.on('dragmove', function () {
 
 circle2.on('dragmove', function () {
     blueLine.points([circle.x(), circle.y(), circle2.x(), circle2.y()]);
-    
+
     circle3.x((circle.x() + circle2.x()) / 2);
     circle3.y((circle.y() + circle2.y()) / 2);
 
     layer.draw();
+});
+
+var simpleText = new Konva.Text({
+    x: 15,
+    y: 15,
+    text: 'Arrastre cualquier circulo situado en los extremos',
+    fontSize: 15,
+    fontFamily: 'Calibri',
+    fill: 'green'
 });
