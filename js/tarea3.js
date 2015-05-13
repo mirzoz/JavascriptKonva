@@ -50,3 +50,23 @@ var blueLine = new Konva.Line({
     linecap: 'round',
     linejoin: 'round'
 });
+
+//hacemos que la linea siga a los puntos
+
+circle.on('dragmove', function () {
+    blueLine.points([circle.x(), circle.y(), circle2.x(), circle2.y()]);
+
+    circle3.x((circle.x() + circle2.x()) / 2);
+    circle3.y((circle.y() + circle2.y()) / 2);
+
+    layer.draw();
+});
+
+circle2.on('dragmove', function () {
+    blueLine.points([circle.x(), circle.y(), circle2.x(), circle2.y()]);
+    
+    circle3.x((circle.x() + circle2.x()) / 2);
+    circle3.y((circle.y() + circle2.y()) / 2);
+
+    layer.draw();
+});
