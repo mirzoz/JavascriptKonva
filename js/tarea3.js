@@ -37,3 +37,16 @@ var circle3 = new Konva.Circle({
     stroke: 'yellow',
     strokeWidth: 3
 });
+
+//activamos el movimiento
+circle.draggable('true');
+circle2.draggable('true');
+
+// creamos la linea
+var blueLine = new Konva.Line({
+    points: [circle.x(), circle.y(), circle2.x(), circle2.y()],
+    stroke: 'blue',
+    strokeWidth: 10,
+    linecap: 'round',
+    linejoin: 'round'
+});
