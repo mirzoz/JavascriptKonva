@@ -79,3 +79,11 @@ var simpleText = new Konva.Text({
     fontFamily: 'Calibri',
     fill: 'green'
 });
+// añadimos la forma a la capa
+layer.add(blueLine);
+layer.add(circle);
+layer.add(circle2);
+layer.add(circle3);
+layer.add(simpleText);
+// añadimos la capa al campo
+stage.add(layer);
